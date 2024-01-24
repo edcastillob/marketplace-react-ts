@@ -1,0 +1,101 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Camisa de caballeros XL",
+        "description": "Camisa Blue XL New Temp. 2024 Classica",
+        "price": 45,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472349/prodelevatepf/rho3fq893dpc0rpbp2sa.jpg",
+        "category": "Camisas"
+      },
+      {
+        "id": 2,
+        "name": "Franela Dama",
+        "description": "Franela para dama versio deportiva tendencia 23-24",
+        "price": 30,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472435/prodelevatepf/dtujp0qdflackiwwlds8.jpg",
+        "category": "Camisetas"
+      },
+      {
+        "id": 3,
+        "name": "Pantalon dama",
+        "description": "Pantalon para dama, todos los modelos Tendencia 24",
+        "price": 40,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472508/prodelevatepf/st3vmiiesg6uppnlr1uv.jpg",
+        "category": "Pantalones"
+      },
+      {
+        "id": 4,
+        "name": "Zapatos Nike",
+        "description": "Zapatos nike para dama",
+        "price": 160,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472604/prodelevatepf/dhtuy1wko6mtyhwmxyhm.jpg",
+        "category": "Zapatos"
+      },
+      {
+        "id": 5,
+        "name": "Pantalon de Dama",
+        "description": "Nuevos modelos pantalon dama",
+        "price": 50,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472832/prodelevatepf/hybuopuubp62xqdiislv.webp",
+        "category": "Pantalones"
+      },
+      {
+        "id": 6,
+        "name": "Zapatos nike White",
+        "description": "Colección 2024 Verano",
+        "price": 250,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704750749/prodelevatepf/p3vd8rg1sow8xv7zcjv3.jpg",
+        "category": "Zapatos"
+      },
+      {
+        "id": 7,
+        "name": "Camisa L Pink",
+        "description": "Camisa Rosa L New Temp. 2024 Classica Caballero",
+        "price": 50,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472391/prodelevatepf/m41wmme1pkhnwceuu3lw.jpg",
+        "category": "Camisas"
+      },
+      {
+        "id": 8,
+        "name": "Camiseta Dama",
+        "description": "Franela para dama versio deportiva tendencia 23-24",
+        "price": 32,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472468/prodelevatepf/qbmmdqlfir1swu914c19.jpg",
+        "category": "Camisetas"
+      },
+      {
+        "id": 9,
+        "name": "Pantalon Caballero",
+        "description": "Pantalon para caballero Clasicos",
+        "price": 41,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472562/prodelevatepf/s4e1arigif78eseiycwt.jpg",
+        "category": "Pantalones"
+      },
+      {
+        "id": 10,
+        "name": "Zapatos para damas nike",
+        "description": "Nike para dama deportivos para todo tipo de actividad dep. calidad",
+        "price": 250,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704472659/prodelevatepf/o6hmz6qpz0gz9pid4hxl.jpg",
+        "category": "Zapatos"
+      },
+      {
+        "id": 11,
+        "name": "Jeans innovation",
+        "description": "Nueva Coleccion 2024",
+        "price": 120,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704750717/prodelevatepf/tl3ogpw6swmdr5oiqyja.webp",
+        "category": "Pantalones"
+      },
+      {
+        "id": 12,
+        "name": "Jordan V Fire Red",
+        "description": "Air Jordan V Fire Red New Colection 2024",
+        "price": 300,
+        "image": "https://res.cloudinary.com/prodelevatepf/image/upload/v1704750942/prodelevatepf/nnfvfsjthubyth5ypgwl.webp",
+        "category": "Zapatos"
+      }
+    ]
+  }
+  
