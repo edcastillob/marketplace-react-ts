@@ -11,7 +11,7 @@ type HeaderProps ={
     export const HeaderComponent: React.FC<HeaderProps> = ({description, title, element}) => { 
         return (
            <div>
-             <Box sx={{width: "100%", height:"350px"}}>
+             <Box sx={{width: "100%", height:"150px"}}>
                 <Grid 
                 container 
                 direction="row"
@@ -27,12 +27,12 @@ type HeaderProps ={
                         alignItems="center"
                         sx={{height:"100%"}}
                         >
-                            {element !== undefined && <Grid item sx={{mt: 4, width: "100%"}}>{element}</Grid>}
+                            {element !== undefined && <Grid item sx={{mt: 1, width: "100%"}}>{element}</Grid>}
                             <Grid item>
                                 <Typography variant="h2">{title}</Typography>
                             </Grid>
                             <Grid item>
-                                <Typography variant="h6" sx={{mt: 2}}>{description}</Typography>
+                                <Typography variant="h6" sx={{mt: 1}}>{description}</Typography>
                             </Grid>
                         </Grid>
                     </Grid>

@@ -18,9 +18,8 @@ export const HomePage: React.FC<{}> = () => {
       try {
         const response = await fetch("./products.json");
         const data = await response.json();
-        console.log(data.products.length, "qty");
         setProducts(data.products);
-        setTimeout(() => setLoading(false), 1000);
+        setTimeout(() => setLoading(false), 500);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -42,7 +41,7 @@ export const HomePage: React.FC<{}> = () => {
   return (
     <Container maxWidth="xl">
       <HeaderComponent
-        element={<img src={km} alt="logo" style={{width:"50%"}}/>}
+        element={<img src={km} alt="logo" style={{width:"35%"}}/>}
         // title="Store-kM"
         description="Tienda de ventas online"
       />
@@ -63,6 +62,7 @@ export const HomePage: React.FC<{}> = () => {
                       name={p.name}
                       category={p.category}
                       price={p.price}
+                      id= {p.id}
                     />
                   </Grid>
                 ))}
