@@ -55,9 +55,8 @@ export const HomePage: React.FC<{}> = () => {
             {products.length !== 0 && (
               <Grid container spacing={2} direction="row" sx={{ my: 2 }}>
                 {productsToShow!.map((p) => (
-                  <Grid item xs={3}>
+                  <Grid key={p.id} item xs={3}>
                     <CardComponent
-                      key={p.id}
                       image={p.image}
                       name={p.name}
                       category={p.category}
