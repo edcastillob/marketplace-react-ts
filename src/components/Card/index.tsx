@@ -10,13 +10,13 @@ import {
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { addToCart } from "../../redux/slices/cart.slice";
+import { addToCart, removeToCart } from "../../redux/slices/cart.slice";
 
 
 type CardProps ={ 
-  id: string | number;
+  id: any;
   name: string;
-  description:string;
+  description?: any;
   price: number;
   image: string;
   category: string
@@ -38,6 +38,10 @@ export const CardComponent: React.FC<CardProps> = ({name, description, price, im
         image, 
         description,
       }))
+  }
+
+  const handleRemoveToCart = () => { 
+    dispatch(removeToCart({id}))
   }
 
   useEffect(() => {     
@@ -70,12 +74,22 @@ export const CardComponent: React.FC<CardProps> = ({name, description, price, im
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant="contained" size="small" fullWidth onClick={() => navigate(`/product/${id}`)}>
-          Detail
-        </Button>
-        <Button disabled={disableOptCartBtn} variant="outlined" size="small" fullWidth onClick={handleAddToCart}>
-          Add to Cart
-        </Button>
+      <Button variant="contained" size="small" fullWidth onClick={() => navigate(`/product/${id}`)}>
+    Detail
+  </Button>
+  
+  {disableOptCartBtn ? (
+    <>
+      <Button variant="outlined" size="small" fullWidth onClick={handleRemoveToCart}>
+        Remove
+      </Button>
+    </>
+  ) : (
+    <Button disabled={disableOptCartBtn} variant="outlined" size="small" fullWidth onClick={handleAddToCart}>
+      Add to Cart
+    </Button>
+  )}
+ 
       </CardActions>
     </Card>
   );
