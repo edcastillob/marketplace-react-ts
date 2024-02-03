@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { addToCart, removeToCart } from "../../redux/slices/cart.slice";
+import { setItem } from "../../utils/localStorage";
 
 
 type CardProps ={ 
@@ -45,7 +46,8 @@ export const CardComponent: React.FC<CardProps> = ({name, description, price, im
   }
 
   useEffect(() => {     
-    setDisableOptCartBtn( productExist.some((p) =>( p.id === id)) )      
+    setDisableOptCartBtn( productExist.some((p) =>( p.id === id)) ) 
+    setItem('cart', productExist)     
   }, [productExist, id])
   
 
