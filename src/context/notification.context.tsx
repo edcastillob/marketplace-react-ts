@@ -8,7 +8,6 @@ type ContextProps = {
 };
 
 const NotificationContext = React.createContext<ContextProps | null>(null);
-
 export const NotificationProvider: React.FC<{ children: JSX.Element }> = ({
   children,
 }) => {
