@@ -12,7 +12,7 @@ import { ILoginType } from "../../Interface/Login.interface";
 import { LoginValidate } from "../../utils/validateForm";
 import { useNotification } from "../../context/notification.context";
 
-export const LoginPage: React.FC<{}> = () => {
+const LoginPage: React.FC<{}> = () => {
   const { getSuccess } = useNotification();
  
     const formik = useFormik<ILoginType>({
@@ -87,3 +87,5 @@ export const LoginPage: React.FC<{}> = () => {
     </>
   );
 };
+
+export default LoginPage;

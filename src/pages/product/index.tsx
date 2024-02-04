@@ -8,7 +8,7 @@ import back from '../../assets/back.png'
 
 
 
-export const ProductPage: React.FC = () => {
+const ProductPage: React.FC = () => {
     const { id } = useParams();
 
     const [loading, setLoading] = useState<boolean>(true);
@@ -72,3 +72,6 @@ export const ProductPage: React.FC = () => {
   </Box>
 );
 };
+
+
+export default ProductPage;
