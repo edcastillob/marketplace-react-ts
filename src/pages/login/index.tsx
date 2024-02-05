@@ -11,10 +11,15 @@ import { useFormik } from "formik";
 import { ILoginType } from "../../Interface/Login.interface";
 import { LoginValidate } from "../../utils/validateForm";
 import { useNotification } from "../../context/notification.context";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { login } from "../../redux/slices/auth.slice";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const LoginPage: React.FC<{}> = () => {
+  const { isAuth } = useAppSelector((state) => state.authReducer);
   const { getSuccess } = useNotification();
- 
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate()
     const formik = useFormik<ILoginType>({
       initialValues:{
         username: '',
@@ -22,15 +27,19 @@ const LoginPage: React.FC<{}> = () => {
       },
       validationSchema: LoginValidate,
       onSubmit: (values: ILoginType) => { 
+        dispatch(login())
+        navigate('/')
         getSuccess(JSON.stringify(values)) 
       },
     });
 
-  return (
-    <>
+  return ( isAuth ?
+    <Navigate to='/' replace/>
+    : 
+      <>
       <Container maxWidth="sm">
-        <Grid
-          container
+      <Grid
+      container
           direction="column"
           alignItems="center"
           justifyContent="center"
@@ -84,7 +93,7 @@ const LoginPage: React.FC<{}> = () => {
           </Grid>
         </Grid>
       </Container>
-    </>
+    </>  
   );
 };
 
