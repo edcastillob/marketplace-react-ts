@@ -14,8 +14,11 @@ import { useNotification } from "../../context/notification.context";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { login } from "../../redux/slices/auth.slice";
 import { Navigate, useNavigate } from "react-router-dom";
+import { authThunk } from "../../redux/thunks/auth.thunk";
 
 const LoginPage: React.FC<{}> = () => {
+  // user: edwar.castillo@gmail.com
+  // pass: Edwar12345
   const { isAuth } = useAppSelector((state) => state.authReducer);
   const { getSuccess } = useNotification();
   const dispatch = useAppDispatch();
@@ -27,9 +30,10 @@ const LoginPage: React.FC<{}> = () => {
       },
       validationSchema: LoginValidate,
       onSubmit: (values: ILoginType) => { 
-        dispatch(login())
+        // dispatch(login())
+        dispatch(authThunk(values))
         navigate('/')
-        getSuccess(JSON.stringify(values)) 
+        // getSuccess(JSON.stringify(values)) 
       },
     });
 
